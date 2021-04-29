@@ -12,11 +12,13 @@ spec:
   revisionHistoryLimit: 3
   selector:
     matchLabels:
+      test: pass
       app: {{ template "helm-guestbook.name" . }}
       release: {{ .Release.Name }}
   template:
     metadata:
       labels:
+        test: pass
         app: {{ template "helm-guestbook.name" . }}
         release: {{ .Release.Name }}
     spec:
